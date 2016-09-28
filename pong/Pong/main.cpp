@@ -12,16 +12,26 @@ int main(int argc, char *argv[])
    // w.show();
 
     QGraphicsScene * scene = new QGraphicsScene();
+    scene->setSceneRect(0,0,1000,500);
 
     myLine * line = new myLine();
-    line->setRect(0,0,5,100);
-
+    line->setRect(1200,300,5,100);
     scene->addItem(line);
+
+/*
+    myLine * line1 = new myLine();
+    line1->setRect(0,250,5,100);
+    scene->addItem(line1);
+*/
 
     line->setFlag(QGraphicsItem::ItemIsFocusable);
     line->setFocus();
 
     QGraphicsView * view = new QGraphicsView(scene);
+
+    view->setFixedSize(1000, 500);
+    view->setSceneRect(0, 0, 1000, 500);
+    view->fitInView(0, 0, 1000, 500, Qt::KeepAspectRatio);
 
     view->show();
 
