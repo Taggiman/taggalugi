@@ -13,9 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-    myLine.cpp
+    myLine.cpp\
+    linehandler.cpp
 
 HEADERS  += \
-    myLine.h
+    myLine.h\
+    linehandler.h
 
 FORMS    += mainwindow.ui
